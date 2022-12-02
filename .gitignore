@@ -1,0 +1,5 @@
+/api/src/main/resources/redoktober-google-vision.json
+*.class
+*.log
+.idea
+target
