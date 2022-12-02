@@ -77,9 +77,12 @@ See [Migrations](api/src/main/resources/db/migration) for DDLs
   - I normally wouldn't add DB migrations at app start up but given there is no CI in this example, adding it app startup
 
 ## Docker
-Ran out of time to get this solution fully dockerized. Having some issues with sbt-assembly
+Ran out of time to get this solution fully dockerized. Having some issues with sbt-assembly. 
+Specifically, when I assemble the fat-jar it can't find my main class ┬─┬ ︵ /(.□. \）
 
-
+## Postman Collection
+There is Postman collection [RedOktober.postman_collection.json](RedOktober.postman_collection.json) in
+the root of the repo.
 
 
 

@@ -6,7 +6,6 @@ import cats.implicits._
 import cats.effect.{IO, Resource}
 import com.jrsmith.redoktober.domain.{DetectedObject, Image, LocalSource, RemoteSource}
 import doobie.implicits._
-import doobie.util.transactor.Transactor
 import doobie._
 import doobie.hikari.HikariTransactor
 import doobie.postgres.circe.jsonb.implicits._

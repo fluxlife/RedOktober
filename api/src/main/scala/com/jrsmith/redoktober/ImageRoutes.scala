@@ -5,9 +5,9 @@ import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.server.Directives._
 import com.jrsmith.redoktober.Requests.{EmptyIdentifyObjectsReq, IdentifyObjectsReq, InvalidIndentifyObjectsReq}
 import com.jrsmith.redoktober.Responses.{ImageResponse, ImagesResponse}
-import com.jrsmith.redoktober.db.repositories.{ImageIdAndMetadataDTO, ImagesRepo}
+import com.jrsmith.redoktober.db.repositories.ImageIdAndMetadataDTO
 import com.jrsmith.redoktober.domain.{LocalSource, RemoteSource}
-import com.jrsmith.redoktober.services.{ImageService, ImageServiceImpl, ObjectDetectionServiceImpl}
+import com.jrsmith.redoktober.services.ImageService
 import de.heikoseeberger.akkahttpcirce.FailFastCirceSupport
 import io.circe.generic.auto._
 

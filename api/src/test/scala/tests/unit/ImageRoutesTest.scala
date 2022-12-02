@@ -10,11 +10,7 @@ import de.heikoseeberger.akkahttpcirce.FailFastCirceSupport
 import org.scalatest._
 import matchers._
 import org.scalacheck.Gen
-import org.scalatest.propspec.AnyPropSpec
-import org.scalacheck._
 import org.scalatest.flatspec.AnyFlatSpec
-import org.scalatest.matchers.must.Matchers.be
-import org.scalatestplus.scalacheck.Checkers.check
 import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks.forAll
 import tests.unit.domain.ImageGen
 import tests.unit.services.ImageServiceGen
@@ -23,7 +19,6 @@ import java.util.UUID
 import scala.collection.immutable._
 import scala.concurrent.{Await, Future}
 import scala.concurrent.duration._
-import scala.util.{Failure, Success}
 import io.circe.generic.auto._
 
 class ImageRoutesTest extends AnyFlatSpec with should.Matchers with ScalatestRouteTest with FailFastCirceSupport{

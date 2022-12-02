@@ -56,15 +56,21 @@ lazy val api = (project in file("api"))
     name := "RedOktober-API",
     libraryDependencies ++= apiDeps,
     Test / javaOptions += s"-Dconfig.file=${sourceDirectory.value}/test/resources/application.test.conf",
-    assembly / mainClass := Some("package com.jrsmith.redoktober.App"),
+    assembly / mainClass := Some("com.jrsmith.redoktober.App"),
+    Compile / mainClass := Some("com.jrsmith.redoktober.App"),
     assembly / assemblyJarName := "app.jar",
     ThisBuild / assemblyMergeStrategy := {
       case PathList("javax", "servlet", xs@_*) => MergeStrategy.first
       case PathList(ps@_*) if ps.last endsWith ".html" => MergeStrategy.first
+      case m if m.toLowerCase.endsWith("manifest.mf") =>
+        MergeStrategy.discard
       case "application.conf" => MergeStrategy.concat
-      case x =>
-        MergeStrategy.last
-//        val oldStrategy = (ThisBuild / assemblyMergeStrategy).value
-//        oldStrategy(x)
+      case x => MergeStrategy.last
     }
   )
+
+lazy val root = (project in file("."))
+  .settings(
+    name := "RedOktober",
+    publishArtifact := false
+  ).aggregate(api)

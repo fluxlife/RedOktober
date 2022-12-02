@@ -1,7 +1,7 @@
 package com.jrsmith.redoktober.domain
 
 import java.time.format.DateTimeFormatter
-import java.time.{Instant, LocalDate}
+import java.time.Instant
 import java.util.UUID
 
 case class Vertex(x: Float, y: Float)

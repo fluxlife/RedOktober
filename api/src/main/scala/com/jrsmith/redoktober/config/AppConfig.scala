@@ -8,7 +8,7 @@ import doobie.implicits._
 import pureconfig._
 import pureconfig.generic.auto._
 
-import java.util.concurrent.{ExecutorService, Executors}
+import java.util.concurrent.Executors
 import scala.concurrent.ExecutionContext
 
 object HikariConfigValues{
